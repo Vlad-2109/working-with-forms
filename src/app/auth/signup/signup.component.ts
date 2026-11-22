@@ -89,7 +89,7 @@ export class SignupComponent {
       return;
     }
 
-    console.log(this.form.value);
+    console.log('VALID FORM', this.form.value);
   }
 
   onReset() {
