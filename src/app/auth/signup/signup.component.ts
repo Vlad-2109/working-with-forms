@@ -4,6 +4,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
   Validators,
+  FormArray,
 } from '@angular/forms';
 
 @Component({
@@ -51,6 +52,11 @@ export class SignupComponent {
     >('student', {
       validators: [Validators.required],
     }),
+    sources: new FormArray([
+      new FormControl(false),
+      new FormControl(false),
+      new FormControl(false),
+    ]),
     agree: new FormControl(false, {
       validators: [Validators.required],
     }),
